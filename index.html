@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Задача 4</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container-fluid p-0 m-0">
+           
+        <div class="row g-0">
+
+            <header class="col-12 col-lg-6 p-2 mb-2 d-flex align-items-center">
+                <img src="image.jpg" class="header_logo img-fluid" id="logo" alt="Мега Дупер Ультра красивая картинка">
+                <h1 class="header_title m-0 fs-3">СУПЕР НАЗВАНИЕ</h1>
+            </header>
+
+            <nav class="col-12 col-lg-6 p-2 mb-2 d-flex flex-column flex-lg-row align-items-lg-start justify-content-lg-end">
+                <a class="nav_link p-2" href="">Ссылка меню 1</a>
+                <a class="nav_link p-2" href="">Ссылка 2</a>
+                <a class="nav_link p-2" href="">Ссылка 3</a>
+            </nav>
+
+        </div>
+
+        <main class="mx-auto my-3 d-flex flex-column">
+
+            <div id="table" class="main_block order-0 order-lg-2 p-3 mb-3">
+                <h2 class="fs-4 mb-3">Таблица</h2>
+                <div class="table-responsive">
+                    <table class="table table-bordered m-0">
+                        <thead>
+                            <tr>
+                                <th>Очень</th>
+                                <th>серьёзные</th>
+                                <th>названия</th>
+                                <th>колонок!</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>6</td>
+                                <td>7</td>
+                                <td rowspan="2" class="merged-cell">8 и 12</td>
+                            </tr>
+                            <tr>
+                                <td>183402</td>
+                                <td>10</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>14</td>
+                                <td>15</td>
+                                <td>16</td>
+                            </tr>
+                            <tr>
+                                <td>17</td>
+                                <td>18</td>
+                                <td colspan="2" class="merged-cell">19-20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div id="links" class="main_block order-lg-1 p-3 mb-3">
+                <h2 class="fs-4 mb-2">Ссылки</h2>
+                <ul class="m-0">
+                    <li><a href="http://kubsu.ru">Обычная</a></li>
+                    <li><a href="https://kubsu.ru">Https</a></li>
+                    <li><a href="https://kubsu.ru"><img src="image2.png" alt="Изображение" height="64px" width="64px"></a></li>
+                    <li><a href="/">Сокращенная</a></li>
+                    <li><a href="#logo">Ссылка на фрагмент</a></li>
+                    <li><a href="?id=1234">Ссылка с параметром id</a></li>
+                    <li><a href="?onepar=one&secpar=sec&thirdpar=third">Ссылка с 3 параметрами</a></li>
+                    <li><a href="image.jpg">Относительная</a></li>
+                    <li><a href="../visheodin">Выше на один</a></li>
+                    <li><a href="../../vishedva">Выше на два</a></li>
+                    <li>Текст текст <a href="">опа ссылка </a>текст текст</li>
+                    <li><a href="http://kubsu.ru#main-content">Фрагмент с другого сайта</a></li>
+                    <li>
+                        <img src="PolandRound.png" usemap="#map_polandround">
+                        <map name="map_polandround">
+                            <area href="https://kubsu.ru" coords="198,158,56,74" shape="rect"/>
+                            <area href="https://kubsu.ru" coords="377,115,52" shape="circle"/>
+                        </map>
+                    </li>
+                    <li><a href="">Пустая</a></li>
+                    <li><a>Без href</a></li>
+                    <li><a href="https://kubsu.ru" rel="nofollow">Запрещен переход поисковикам</a></li>
+                    <li><noindex>Запрещенную для индексации поисковиками</noindex></li>
+                    <li>
+                        <ol>
+                            <li><a href="" title="Odinssilka">Первая + title</a></li>
+                            <li><a href="" title="Dvassilka">Вторая + title</a></li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="main_block order-lg-2 p-3 mb-3">
+                <form action="#" method="POST">
+                    <label>ФИО<br>
+                        <input type="text" name="fio">
+                    </label>
+                    <br>
+                    <label>Телефон:<br>
+                        <input type="tel" name="phone">
+                    </label>
+                    <br>
+                    <label>Эл-почта:<br>
+                        <input type="email" name="email">
+                    </label>
+                    <br>
+                    <label>Дата рождения:<br>
+                        <input type="date" name="birthday">
+                    </label>
+                    <br>
+                    <label>
+                        <span>Пол:</span><br>
+                        <label><input type="radio" name="gender" value="male"> Мужской</label>
+                        <label><input type="radio" name="gender" value="female"> Женский</label>
+                    </label>
+                    <br>
+                    <label>
+                        <label>Любимый язык программирования (множественный выбор):</label><br>
+                        <select name="languages[]" multiple="multiple">
+                            <option value="pascal">Pascal</option>
+                            <option value="c">C</option>
+                            <option value="cpp">C++</option>
+                            <option value="javascript">JavaScript</option>
+                            <option value="php">PHP</option>
+                            <option value="python">Python</option>
+                            <option value="java">Java</option>
+                            <option value="haskell">Haskell</option>
+                            <option value="clojure">Clojure</option>
+                            <option value="prolog">Prolog</option>
+                            <option value="scala">Scala</option>
+                        </select>
+                    </label>
+                    <br>
+                    <label>Биография:<br>
+                        <textarea name="bio" rows="5" cols="40" placeholder="Расскажите о себе..."></textarea>
+                    </label>
+                    <br>
+                    <label>
+                        <input type="checkbox" name="contract" value="agreed" required> 
+                        С контрактом ознакомлен(а)
+                    </label>
+                    <br>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+
+        </main>
+
+        <footer class="p-3 mt-2">
+            <p class="m-0 fs-6">
+                (с) Лейднер Леонид
+            </p>
+        </footer>
+        
+    </div>
+
+</body>
+</html>
